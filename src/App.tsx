@@ -1,13 +1,15 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
-import Example1Container from './example1/Example1Container';
+import Exercise1Container from './exercise1/Exercise1Container';
+import Exercise2Container from './exercise2/Exercise2Container';
 
 function App() {
   return (
     <>
-    <Example1Container />
+    <Exercise1Container />
     <hr />
+    <Exercise2Container />
     </>
   );
 }

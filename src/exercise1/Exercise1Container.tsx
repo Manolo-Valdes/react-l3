@@ -2,7 +2,7 @@ import KeyListener from "./KeyListener";
 import ValueEmiter from "./ValueEmiter";
 
 
-function Example1Container()
+function Exercise1Container()
 {
     return (
         <>
@@ -14,4 +14,4 @@ function Example1Container()
     );
 }
 
-export default Example1Container;
+export default Exercise1Container;
