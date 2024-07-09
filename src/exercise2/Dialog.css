@@ -4,6 +4,12 @@ dialog {
     border: 0;
     border-radius: 0.5rem;
     box-shadow: 0 0 0.5rem 0.25rem hsl(0 0% 0% / 10%);
+    
+    position: absolute;
+    margin: 0%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -70%);
   }
 
 
@@ -17,6 +23,7 @@ dialog {
   }
   .close:hover {
     opacity: 1;
+    cursor: pointer;
   }
   .close:before, .close:after {
     position: absolute;

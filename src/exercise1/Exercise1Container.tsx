@@ -6,7 +6,7 @@ function Exercise1Container()
 {
     return (
         <>
-        <h1>Example 1</h1>
+        <h1>Exercise 1</h1>
         <ValueEmiter storeKey='keyA' value='Hello' />
         <KeyListener storeKey='keyA'/>
         <KeyListener storeKey='keyA'/>
