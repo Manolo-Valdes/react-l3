@@ -12,12 +12,12 @@ function ValueEmiter({storeKey,value}:{storeKey:string,value:string})
                 setValue(inputElement.current.value)
         } 
     return (
-        <div>
+        <>
             <h3>Key: {storeKey}</h3>
             <h4>Value: {_value}</h4>
             <input type="text" ref={inputElement} />
             <button onClick={onClickHandler}>Change value</button>
-        </div>
+        </>
     );
 }
 

@@ -1,4 +1,3 @@
-import './Exercise3Container.css';
 import { ReactNode, useEffect, useState } from "react";
 import FilterDropdown from "./FilterDropDown";
 
@@ -77,7 +76,7 @@ function Exercise3Container()
         <>
             <h1>Exercise 3</h1>
             <div className='row'>
-                <div className='col'>
+                <div className='col border'>
                     <h3>User data</h3>    
                     <span>Find by:</span><select id="propSelect" onChange={onPropChange}>
                         <option value="name">name</option>
@@ -86,7 +85,9 @@ function Exercise3Container()
                     <br/>
                     <FilterDropdown<User> items={users} filterProp={filter} />
                 </div>
-                <div className='col'>
+                <div className="col border">
+                    <div className="row">
+                    <div className='col'>
                     <h3>Trivia data</h3>
                     <FilterDropdown<TriviaCategory> items={categories} filterProp='name'  
                         valueChange={(items)=> setSelectedCategories(items)}
@@ -102,7 +103,9 @@ function Exercise3Container()
                         <tbody>{triviaToRows(selectedCategories)}</tbody>
                     </table>
                 
-            </div>
+                    </div>
+                    </div>
+                </div>
             </div>
         </>
     );

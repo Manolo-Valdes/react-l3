@@ -34,10 +34,17 @@ function Exercise2Container()
                 <button onClick={()=>dialogRef2.current?.close()}>close</button>
             </DialogFooter>
         </Dialog>
-
-        <button onClick={()=>dialogRef.current?.showModal()}>Show Modal</button>
-        <button onClick={()=>dialogRef2.current?.show()}>Show Dialog</button>    
-        <button onClick={()=>dialogRef2.current?.close()}>Close Dialog</button>    
+        <div className="row">
+            <div className="col">
+                <button onClick={()=>dialogRef.current?.showModal()}>Show Modal</button>
+            </div>
+            <div className="col">
+                <button onClick={()=>dialogRef2.current?.show()}>Show Dialog</button>    
+            </div>
+            <div className="col">
+                <button onClick={()=>dialogRef2.current?.close()}>Close Dialog</button>    
+            </div>
+        </div>
         </>
     );
 }

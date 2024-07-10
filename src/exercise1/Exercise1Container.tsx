@@ -7,9 +7,15 @@ function Exercise1Container()
     return (
         <>
         <h1>Exercise 1</h1>
-        <ValueEmiter storeKey='keyA' value='Hello' />
-        <KeyListener storeKey='keyA'/>
-        <KeyListener storeKey='keyA'/>
+        <div className="row">
+        <div className="col border">
+            <ValueEmiter  storeKey='keyA' value='' />
+        </div>
+        <div className="col border">
+            <KeyListener storeKey='keyA'/>
+            <KeyListener storeKey='keyA'/>  
+        </div>
+        </div>
         </>
     );
 }
