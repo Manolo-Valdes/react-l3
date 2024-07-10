@@ -1,11 +1,11 @@
-import {Dispatch , SetStateAction, useEffect, useState } from "react";
+import {useEffect, useState } from "react";
 
 
 const eventName = "storage";
 type Nullable<T> = T | null;
 
 
-function useStoreValue<T>(key:string,_value:T):[T, (v:T)=>void]
+function useStoreValue<T>(key:string,_value:T):(v:T)=>void
 {
     const [value , _setValue] = useState<T>(() => {
         //Check if there is a value for the key in the localstorage
@@ -31,7 +31,7 @@ function useStoreValue<T>(key:string,_value:T):[T, (v:T)=>void]
         console.log('value setter called');
         _setValue(value);
       }
-      return [value, setValue];
+      return setValue;
 }
 
 function useStoreNotifier<T>(key:string):Nullable<T>

@@ -3,7 +3,7 @@ import useStoreValue from "./storeHook";
 
 function ValueEmiter({storeKey,value}:{storeKey:string,value:string})
 {
-    const [_value , setValue] = useStoreValue(storeKey,value)
+    const setValue = useStoreValue(storeKey,value)
     const inputElement = useRef<HTMLInputElement>(null);
 
     const onClickHandler = ()=>
@@ -13,8 +13,7 @@ function ValueEmiter({storeKey,value}:{storeKey:string,value:string})
         } 
     return (
         <>
-            <h3>Key: {storeKey}</h3>
-            <h4>Value: {_value}</h4>
+            <h3>Value Setter for Key: {storeKey}</h3>
             <input type="text" ref={inputElement} />
             <button onClick={onClickHandler}>Change value</button>
         </>
