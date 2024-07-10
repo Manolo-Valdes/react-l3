@@ -7,7 +7,7 @@ function Exercise1Container()
     return (
         <>
         <h1>Exercise 1</h1>
-        <p>In order to test the key listener for external app key changes. open the app in other tab, or edit directly the local Storage from the dev tools</p>
+        <p>In order to test the key listener for external apps  key changes. open the app in other tab, or edit directly the local Storage from the dev tools</p>
         <div className="row">
         <div className="col border">
             <ValueEmiter  storeKey='keyA' value='' />
