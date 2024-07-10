@@ -1,0 +1,7 @@
+.dropDown {
+    list-style-type: none;
+    
+    border: 0;
+    border-radius: 0.5rem;
+    box-shadow: 0 0 0.5rem 0.25rem hsl(0 0% 0% / 10%);
+}
