@@ -5,9 +5,13 @@ import Exercise1Container from './exercise1/Exercise1Container';
 import Exercise2Container from './exercise2/Exercise2Container';
 import Exercise3Container from './exercise3/Exercise3Container';
 
+
+export const enum routes{
+  home="/react-l3",
+};
 const router = createBrowserRouter([
   {
-      path:'/',
+      path:routes.home,
       element: (<>
       <ul className='App-header'>
           <li><Link to={'exercise1'}>Exercise 1</Link> </li>
@@ -35,7 +39,7 @@ const router = createBrowserRouter([
   },
   {
       path:'*',
-      element: (<Navigate to={'/'}/>),
+      element: (<Navigate to={routes.home}/>),
   },
   ]);
 function App() {
