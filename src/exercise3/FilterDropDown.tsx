@@ -5,6 +5,7 @@ interface FilterDropdownProps<T>
 {
     items:T[],
     filterProp:keyof T,
+    placeholder?:string
     valueChange?:(items:T[])=>void
 }
 
@@ -20,7 +21,7 @@ function getProperty<T, K extends keyof T>(obj: T, key: K) {
     return (<ul className="dropDown">{items.map((value,i) => <li key={i} dangerouslySetInnerHTML={{ __html:value}} />)}</ul>);
   }  
 
-function FilterDropdown<T>({items,filterProp,valueChange=(items:T[])=>{}}:FilterDropdownProps<T>)
+function FilterDropdown<T>({items,filterProp,placeholder,valueChange=(items:T[])=>{}}:FilterDropdownProps<T>)
 {
     const inputRef = useRef<HTMLInputElement>(null);
     const [filteredItems , setFilteredItems] = useState<string[]>([])
@@ -79,7 +80,10 @@ function FilterDropdown<T>({items,filterProp,valueChange=(items:T[])=>{}}:Filter
 
     return (
         <>
-        <input ref={inputRef} type="text"  onChange={onchangeHandler}/>
+        <input ref={inputRef} type="text" 
+         onChange={onchangeHandler}
+         placeholder={placeholder}
+        />
         <FilterDropdownList items={filteredItems}/>
         </>
     );

@@ -42,6 +42,7 @@ function Exercise3Container()
     const [selectedCategories, setSelectedCategories] = useState<TriviaCategory[]>([]);
     const [users, setUsers] = useState<User[]>([]);
     const [filter, setFilter] = useState<keyof User>('name');
+    const [userPlaceHolder, setUserPlaceHolder] = useState('user name')
 
     useEffect(() => {
         fetch("https://opentdb.com/api_category.php")
@@ -63,6 +64,10 @@ function Exercise3Container()
         {
             const value = event.target.value as keyof User;
             setFilter(value);
+            if (event.target.value === 'user')
+                setUserPlaceHolder('user name')
+            else
+                setUserPlaceHolder('user phone')
         }
     
     
@@ -83,13 +88,16 @@ function Exercise3Container()
                         <option value="phone">phone</option>
                     </select>
                     <br/>
-                    <FilterDropdown<User> items={users} filterProp={filter} />
+                    <FilterDropdown<User> items={users} 
+                    placeholder={userPlaceHolder}
+                    filterProp={filter} />
                 </div>
                 <div className="col border">
                     <div className="row">
                     <div className='col'>
                     <h3>Trivia data</h3>
-                    <FilterDropdown<TriviaCategory> items={categories} filterProp='name'  
+                    <FilterDropdown<TriviaCategory> items={categories} filterProp='name'
+                        placeholder="trivia name" 
                         valueChange={(items)=> setSelectedCategories(items)}
                         />
                     </div>
