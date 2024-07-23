@@ -1,4 +1,3 @@
-import logo from './logo.svg';
 import './App.css';
 import {createBrowserRouter, Link, Navigate, Outlet, RouterProvider } from 'react-router-dom';
 import Exercise1Container from './exercise1/Exercise1Container';
