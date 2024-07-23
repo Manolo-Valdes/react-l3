@@ -1,8 +1,8 @@
-import { useStoreNotifier } from "./storeHook";
+import { useStoreKeyListener as useStoreKeyListener } from "./storeHook";
 
 function KeyListener({storeKey}:{storeKey:string})
 {
-    const value = useStoreNotifier<string>(storeKey)
+    const value = useStoreKeyListener<string>(storeKey)
 
     return (
         <>

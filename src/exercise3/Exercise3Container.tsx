@@ -49,6 +49,7 @@ function Exercise3Container()
         .then(response => response.json())
         .then(data =>  setCategories(data.trivia_categories))
 },[]);
+
     useEffect(()=>{
         const url ='https://jsonplaceholder.typicode.com/users';
         console.log(url);

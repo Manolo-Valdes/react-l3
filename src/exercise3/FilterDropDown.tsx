@@ -14,7 +14,7 @@ function getProperty<T, K extends keyof T>(obj: T, key: K) {
     return obj[key];
   }
   
-  function FilterDropdownList({items}:{items:string[]})
+function FilterDropdownList({items}:{items:string[]})
   {
     if (items.length ===0)
         return (<></>)

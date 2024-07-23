@@ -34,7 +34,7 @@ function useStoreValue<T>(key:string,_value:T):(v:T)=>void
       return setValue;
 }
 
-function useStoreNotifier<T>(key:string):Nullable<T>
+function useStoreKeyListener<T>(key:string):Nullable<T>
 {
     const [value , setValue] = useState<Nullable<T>>(() => {
         const value = localStorage.getItem(key);
@@ -72,5 +72,5 @@ function useStoreNotifier<T>(key:string):Nullable<T>
     return value;
 }
 
-export  {useStoreNotifier};
+export  {useStoreKeyListener};
 export default useStoreValue;
