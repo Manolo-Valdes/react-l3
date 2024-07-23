@@ -40,6 +40,7 @@ function Exercise3Container()
 {
     const [categories, setCategories] = useState<TriviaCategory[]>([]);
     const [selectedCategories, setSelectedCategories] = useState<TriviaCategory[]>([]);
+
     const [users, setUsers] = useState<User[]>([]);
     const [filter, setFilter] = useState<keyof User>('name');
     const [userPlaceHolder, setUserPlaceHolder] = useState('user name')

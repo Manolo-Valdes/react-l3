@@ -45,10 +45,15 @@ function FilterDropdown<T>({items,filterProp,placeholder,valueChange=(items:T[])
         if (value)
             {
             const filtered:T[] = filterCb(value);
-        const filteredvalues = filtered.map(item => boldPattern((getProperty(item,filterProp) as string), value));
-        setFilteredItems(filteredvalues);
+            const filteredvalues = filtered.map(item => boldPattern((getProperty(item,filterProp) as string), value));
+            setFilteredItems(filteredvalues);
+            valueChange(filtered);
             }
-        },[filterCb,filterProp]
+            else{
+                setFilteredItems([]);
+                valueChange([]);
+            }
+        },[filterCb, filterProp, valueChange]
         );
 
 
