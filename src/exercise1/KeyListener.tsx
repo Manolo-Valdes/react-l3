@@ -1,4 +1,4 @@
-import { useStoreKeyListener as useStoreKeyListener } from "./storeHook";
+import { useStoreKeyListener } from "./storeHook";
 
 function KeyListener({storeKey}:{storeKey:string})
 {
